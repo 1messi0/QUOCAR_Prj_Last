@@ -363,7 +363,8 @@ h3 {
 	border: 1px solid #000; /* 테두리 추가 및 색상 지정 (원하는 색상으로 변경) */
 	border-radius: 5px; /* 라운드 코너를 주어 고급스러운 모양으로 만듭니다. */
 	padding: 10px 20px; /* 내부 여백을 추가하여 텍스트 주변에 여백을 둠 */
-	font-size: 10px; /* 텍스트 크기를 조정하여 더 강조합니다. */
+	font-size: 18px; /* 텍스트 크기를 조정하여 더 강조합니다. */
+	font-weight: bold;
 	cursor: pointer; /* 마우스 커서를 손가락 포인터로 변경하여 클릭 가능함을 나타냅니다. */
 	transition: background-color 0.5s ease; /* 배경색 변경 시 부드러운 전환 효과 추가 */
 }
@@ -583,6 +584,7 @@ h3 {
 			</button>
 			<!-- 추가 내용을 감싸는 div -->
 			<br>
+			<br>
 			<div class="additional-content-container">
 				<div class="additional-content" style="display: none;">
 					<a
@@ -699,6 +701,7 @@ h3 {
 				class="FeedView-module__btn_more___zGfeT">
 				펼쳐보기 ➕ <i class="FeedView-module__ico_plus___dMU_U"></i>
 			</button>
+			<br>
 			<br>
 			<div class="additional-content-container">
 				<div class="additional-content" style="display: none;">

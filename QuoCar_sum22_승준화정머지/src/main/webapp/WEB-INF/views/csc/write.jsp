@@ -18,6 +18,7 @@ body {
 	margin: 0;
 	padding: 0;
 	color: #333;
+	height: 1400px;
 }
 
 main {

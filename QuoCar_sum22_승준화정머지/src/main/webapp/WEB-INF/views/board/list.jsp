@@ -246,6 +246,7 @@ footer {
             </td>
         </tr>
 	</table>
+	<br>
 	   <form    name="form1" method="post" action="${path}/board/list.do">
         <select name="searchOption">
             <!-- 검색조건을 검색처리후 결과화면에 보여주기위해  c:out 출력태그 사용, 삼항연산자 -->
