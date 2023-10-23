@@ -93,7 +93,7 @@ ul, li {
 }
 
 .menu-bar td {
-  padding: 20px;
+  padding: 30px;
   border: none;
 }
 

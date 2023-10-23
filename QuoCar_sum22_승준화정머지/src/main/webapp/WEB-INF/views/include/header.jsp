@@ -10,7 +10,7 @@
 		<a href="/"><h3 class="logo">Quo<span>CAR</span></h3></a>
 	<nav class="category">
 		<ul>
-			<li><a href="/insurance">보험지식</a></li>
+			<li><a href="/insurance">보험</a></li>
 			<li><a href="/mechanic">정비</a></li>
 			<li><a href="/board/list.do">커뮤니티</a></li>
 			<li><a href="/Csc/List2?csc_id=CSC01">고객센터</a></li>

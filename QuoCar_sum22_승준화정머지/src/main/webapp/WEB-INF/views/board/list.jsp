@@ -40,9 +40,9 @@ th, td {
 th {
     background-color: #2f4f4f;
     color: #fff;
+    padding: 12px;
     font-weight: bold;
-    padding: 16px;
-	font-size: 22px; /* 큰 글자 크기로 조정 */    
+	font-size: 20px; /* 큰 글자 크기로 조정 */    
     text-align: center;
 }
 
