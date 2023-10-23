@@ -1,0 +1,159 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap');
+
+
+
+.horizontal-items {
+    display: flex;
+    flex-direction: row; /* 수평으로 배치하려면 행 방향으로 설정 */
+}
+
+.horizontal-items h2 {
+    margin-right: 20px; /* 엔진오일과 타이어 사이에 간격을 설정하세요. */
+}
+
+.horizontal-center {
+    display: flex;
+    justify-content: space-between; /* 왼쪽과 오른쪽에 공간을 나누어 배치 */
+    align-items: center; /* 수직 중앙 정렬 */
+}
+
+.item-left,
+.item-right {
+    flex: 50; /* 동일한 너비로 설정 */
+    text-align: center; /* 가운데 정렬 */
+    margin: 0 10px;
+}
+
+/* 엔진오일과 타이어의 브레이크 글자 스타일 수정 */
+.item-left a,
+.item-right a {
+    font-size: 24px; /* 원하는 크기로 설정하세요. */
+    color: black; /* 검은색으로 설정 */
+    text-decoration: none; /* 밑줄 제거 */
+}
+
+/*  전체 적용 스타일 */
+*      { margin:0;  padding:0;  }
+ul,li  { list-style:none;  }
+body   { font-family: 'Noto Sans KR', sans-serif; }
+a      { text-decoration : none;  }
+table  { border-collapse : collapse; border-spacing : 0; } 
+
+  /* 홈로고 스타일 */
+ a [alt="QUOCAR"] {
+	position: absolute;
+	padding: 30px 50px;
+	left: 10vw;
+	width: 150px;
+	height: auto;
+} 
+
+/* 메뉴 header, footer   */
+
+/* 최종 스타일 */
+.logo {
+    height: 150px;
+    background: #ffffff;
+    text-align: left; /* 로고를 왼쪽 정렬로 변경 */
+    line-height: 100px;
+    font-size: 80px;
+    
+    margin-left: 100px;
+    margin-top: 50px;
+    margin-bottom: 40px;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; /* 애플 스타일의 폰트 사용 */
+    color: #333; /* 텍스트 색상을 어두운 회색으로 설정 */
+    text-decoration: none; /* 기본 텍스트 밑줄 제거 */
+    padding-left: 20px; /* 왼쪽 여백 추가 */
+}
+
+/* 고급스러운 스타일을 적용하기 위해 텍스트 그림자 추가 */
+.logo {
+    text-shadow: 2px 2px 2px #999; /* 그림자 효과 추가 */
+}
+
+.logo:visited {
+    color: #333; /* 방문한 링크의 텍스트 색상도 어두운 회색으로 유지 */
+}
+
+.category {
+    height: 40px;
+    background: #ffffff;
+    color: #000000;
+    text-align: center;
+    line-height: 30px;
+    margin-top: 20px;
+}
+
+.category ul {
+    display: inline-block;
+}
+
+.category ul:after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.category li {
+    float: left;
+}
+
+.category a {
+    display: block;
+    padding: 0 40px;
+    color: #000;
+    font-size: 30px; /* 텍스트 크기 늘림 */
+    transition: 0.3s;
+    font-weight: bold;
+}
+
+.category a:hover {
+    background: #000; /* 호버 시 배경색을 검은색으로 변경 */
+    color: #fff; /* 호버 시 텍스트 색상을 흰색으로 변경 */
+}
+
+.footer {
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 11px;
+    background: #666;
+    color: #fff;
+    padding: 20px 0;
+}
+
+/* 최종 스타일 */
+                
+/* 본문 스타일 */
+.container      {  background:#FFFFFF; padding:50px;  }
+.content        {  width:800px; margin:0 auto; background:#fff; padding:20px; font-size:13px; } 
+.content  h2    {  margin-bottom: 20px; text-align: center; }                 
+.content  table {  border-top:2px solid #666; width:100%; }
+.content  td,  .content th 
+                {  height: 40px; border-bottom: 1px solid #ddd; padding:0 10px; }
+.content  input[type=password]
+            {  height: 20px; /*border-bottom: 1px solid #ddd;*/ padding:0 10px; }
+.content  th    {  background: #f5f5f5; }          
+.content  input[type=text] 
+                { height: 30px; border:1px solid #ddd; padding: 0 10px; }
+/* password 스타일 설정 */
+                
+/* 등록,조회 버튼 */
+.btn_group        { margin-top:20px; text-align: center; }
+.btn_group button { width:80px; height:30px; border:none; 
+                    background: #444; color:#fff;  }
+                    
+/* 중복체크 버튼 */
+
+.fixed-button {
+	position: fixed;
+	font-size: 25px;
+	bottom: 80px; /* 위에서 20px 거리에 고정 */
+	right: 60px; /* 오른쪽에서 20px 거리에 고정 */
+	padding: 30px 30px;
+	border: none;
+	border-radius: 8px;
+	cursor: pointer;
+}
+
