@@ -2,6 +2,31 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
+<style>
+
+        /* 이미지 스타일 */
+        .moving-image {
+            width: 300px; /* 이미지 너비 조정 */
+            height: auto; /* 이미지 높이 자동으로 조정 */
+            position: absolute;
+            top: 10%; /* 이미지 수직 중앙 정렬 */
+            left: 0; /* 초기 위치를 왼쪽 끝으로 설정 */
+            animation: moveImage 7s linear infinite; /* 애니메이션 적용 */
+        }
+
+        /* 이미지 이동 애니메이션 */
+        @keyframes moveImage {
+            0% {
+                left: 0; /* 시작 위치 (왼쪽 끝) */
+            }
+            100% {
+                left: 100%; /* 끝 위치 (오른쪽 끝) */
+            }
+        }
+
+</style>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>로그인</title>
@@ -65,6 +90,10 @@
         </form>
         <p>계정이 없으신가요? <a href="register">가입하기</a></p>
         <p><a href="/">홈으로</a><p>
+        
+        <img src="/img/opencar.png" alt="이미지 설명" class="moving-image">
+        
+        
     </div>
 </body>
 </html>

@@ -9,6 +9,15 @@
         
  
 </head>
+
+<style>
+
+body {
+	background-color: #F2F2F2;
+}
+
+</style>
+
 <body>
 <script src="http://code.jquery.com/jquery-3.5.1.min.js"></script>
 <h3>회원 가입</h3>

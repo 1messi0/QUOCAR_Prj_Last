@@ -14,7 +14,7 @@
          <li><a href="/mechanic">정비</a></li>
          <li><a href="/board/list.do">커뮤니티</a></li>
          <li><a href="/Csc/List2?csc_id=CSC01">고객센터</a></li>
-         <li><a href="/chatGPT">chatGPT</a></li>
+         <li><a href="/chatGPT">QuoGPT</a></li>
             <c:choose>
                 <c:when test="${sessionScope.userid == null}">
                     <li><a href="${path}/user/login">로그인</a></li>
