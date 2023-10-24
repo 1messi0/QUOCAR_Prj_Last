@@ -104,7 +104,7 @@
 
 <style>
 body {
-	margin-bottom: 300px; /* footer와 겹치지 않도록 페이지 하단 여백 추가 */
+	margin-bottom: 100px; /* footer와 겹치지 않도록 페이지 하단 여백 추가 */
 }
 
 footer {

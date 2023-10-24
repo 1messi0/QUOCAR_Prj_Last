@@ -12,122 +12,117 @@
 <title>Insert title here</title>
 <link rel="icon" type="image/x-icon" href="/img/쿼카얼굴.png">
 <link rel="stylesheet" href="/css/common.css" />
+
 <style>
+
 main {
 	background-color: #EFF2F6;
+	height: 1300px;
 }
 
 .chat-container {
-	max-width: 1000px;
-	height: 1000px;
-	margin: auto;
-	padding-top: 50px;
-	padding: 30px;
-	border-radius: 10px;
-	background-color: #FFFFFF;
-	border: solid gray;
-	border-width: 0.5px;
-	box-shadow: 3px 5px 9px rgba(0, 0, 0, 0.2);
+    max-width: 1000px;
+    height: 1000px;
+    margin: auto;
+    padding-top: 50px;
+    padding: 30px;
+    border-radius: 10px;
+    background-color: #F4F4F4;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
 
 .quobot {
-	display: flex; /* Flexbox 사용 */
-	align-items: center; /* 요소들을 수직 가운데 정렬 */
+    display: flex;
+    align-items: center;
 }
 
+/* h1 스타일 업데이트 */
 h1 {
-	color: #333333;
-	font-size: xx-large;
+    color: #333333;
+    font-size: 36px; /* 큰 제목 텍스트 크기 조정 */
+    font-weight: bold;
+    text-align: center; /* 가운데 정렬 */
 }
 
 h2 {
-	color: #333333;
-	font-size: 20px;
-	text-align: left;
+    color: #333333;
+    font-size: 18px;
+    text-align: left;
 }
 
 .chat-list-container {
-	margin-top: 30px;
+    margin-top: 30px;
 }
 
 .answer {
-	background-color: #FFFFFF;
-	border-radius: 5px;
-	max-width: fit-content; /* 내용에 맞게 최대 너비 조정 */
-	height: fit-content;
-	padding: 30px;
-	margin-left: 100px;
-	font-size: 25px;
-	width: 500px;
-	display: inline-block;
-	box-shadow: 3px 5px 9px rgba(0, 0, 0, 0.2);
+    background-color: #FFFFFF;
+    border-radius: 10px;
+    max-width: fit-content;
+    height: fit-content;
+    padding: 20px;
+    margin-left: 100px;
+    font-size: 20px;
+    width: 500px;
+    display: inline-block;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
 }
 
 .next-button {
-	background-color: #FFFFFF;
-	border-radius: 5px;
-	max-width: fit-content; /* 내용에 맞게 최대 너비 조정 */
-	height: auto;
-	padding: 30px;
-	font-size: 25px;
-	width: 500px;
-	display: inline-block;
-	box-shadow: 3px 5px 9px rgba(0, 0, 0, 0.2);
-	margin-left: auto;
-	font-size: 25px;
-	width: 500px;
-	display: inline-block;
-	
+    background-color: #007BFF; /* 애플 블루 컬러 */
+    color: #FFFFFF;
+    border-radius: 10px;
+    max-width: fit-content;
+    height: auto;
+    padding: 30px;
+    font-size: 20px;
+    font-weight: bold;
+    width: 500px;
+    display: inline-block;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    margin-left: auto;
+    transition: background-color 0.2s; /* 호버 효과에 사용되는 속성 추가 */
 }
-.next {
-	margin-left: auto; /* 왼쪽 여백을 자동으로 조정하여 오른쪽 정렬 */
-	margin-right: 0; /* 오른쪽 여백 제거 */
-}
-.next {
-	margin-left: auto; /* 왼쪽 여백을 자동으로 조정하여 오른쪽 정렬 */
-	text-align: right; /* 내부 요소를 오른쪽으로 정렬 */
-}
-</style>
 
+.next-button:hover {
+    background-color: #0056b3; /* 호버 시 컬러 변경 */
+}
+
+.next {
+    margin-left: auto;
+    text-align: right;
+}
+
+.next:hover {
+    cursor: pointer; /* 호버 시 커서 변경 */
+}
+
+</style>
 
 </head>
 <body>
-    <jsp:include page="/WEB-INF/views/include/header.jsp" />
-	<br><br>
-    <main>
-     <div class ="chat-container">
-            <h1>QuoBot</h1>
-            
-			<br><br><br>
-        <div class="quobot">
-            <img src="/img/bot.png" width="70" height="70">
-        </div>
-        
-     		<p class="answer">${vo.ans_cont}</p>
-	
-	<br><br><br><br>
-	<div class ="next">
-	<a class='next-button' href='${viewUrl}'>더 알아보기</a> 	
-	<br><br>
-	<a class= 'next-button' href="/Chat/List3?model_id=MD01">처음으로 돌아가기</a>
-	
-	</div>
-  	
-  	</div>
-   </main>
+	<jsp:include page="/WEB-INF/views/include/header.jsp" />
+	<br>
+	<br>
+	<main>
+		<br>
+		<div class="chat-container">
+			<h1>QuoBot</h1>
+			<br> <hr> <br>
+			<div class="quobot">
+				<img src="/img/bot.png" width="70" height="70">
+			</div>
+			<p class="answer">${vo.ans_cont}</p>
+			<br>
+			<br>
+			<br>
+			<br>
+			<div class="next">
+				<a class='next-button' href='${viewUrl}'>더 알아보기</a> <br>
+				<br> <a class='next-button' href="/Chat/List3?model_id=MD01">처음으로 돌아가기</a>
+			</div>
+		</div>
+	</main>
 
-    <jsp:include page="/WEB-INF/views/include/footer.jsp" />
+	<jsp:include page="/WEB-INF/views/include/footer.jsp" />
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
