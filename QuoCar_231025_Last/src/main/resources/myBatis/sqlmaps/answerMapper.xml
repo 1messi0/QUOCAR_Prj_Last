@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="Answer">  
+	 <!--  답변 목록  -->
+	<select id="AnswerList"
+	        resultType="com.quocar.chat.vo.AnswersVo">
+	 	SELECT  ANS_IDX
+			   ,MODEL_ID
+			   ,MECHANIC_ID
+			   ,ANS_CONT
+		FROM    ANSWERS
+		WHERE    MODEL_ID  =  #{model_id} 
+		ORDER BY ANS_IDX
+	
+	</select>
+	
+	<!-- 답변전송 -->  
+	<select id="AnswerView"
+	        resultType="com.quocar.chat.vo.AnswersVo">
+	 SELECT  ANS_IDX
+			   ,MODEL_ID
+			   ,MECHANIC_ID
+			   ,ANS_CONT
+		FROM    ANSWERS
+		WHERE    MECHANIC_ID  =  #{mechanic_id} and MODEL_ID  =  #{model_id} 
+	</select>	 
+</mapper>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   
