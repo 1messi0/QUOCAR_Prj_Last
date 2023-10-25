@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="User">
+
+ <insert id="insertUser">
+    INSERT INTO QUSER (
+      ID,
+      NAME,
+      USERID,
+      USER_NAME,
+      PASSWORD,
+      GENDER,
+      EMAIL,
+      BIRTHDATE,
+      CAR_MANUFACTURER,
+      CAR_MODEL
+    ) VALUES (
+      (SELECT NVL(MAX(ID),0)+1 FROM QUSER ),
+      #{name},
+      #{userid},
+      #{username},
+      #{password},
+      #{gender},
+      #{email},
+      #{birthdate},
+      #{carManufacturer},
+      #{carModel}
+    )
+  </insert>
+ 
+<select id="loginCheck" resultType="String">
+   SELECT ID, NAME, USERID, USER_NAME, PASSWORD, GENDER, EMAIL, BIRTHDATE, CAR_MANUFACTURER, CAR_MODEL
+   FROM QUSER
+   WHERE USERID = #{userid} AND PASSWORD = #{password}
+</select>
+
+<select id="viewUser" resultType="com.quocar.user.vo.UserVo">
+   SELECT
+       NAME AS name,
+       USERID AS userid,
+       USER_NAME AS username,
+       PASSWORD AS password,
+       GENDER AS gender,
+       EMAIL AS email,
+       BIRTHDATE AS birthdate,
+       CAR_MANUFACTURER AS carManufacturer,
+       CAR_MODEL AS carModel
+   FROM QUSER
+   WHERE USERID = #{userid} AND PASSWORD = #{password}
+</select>
+
+
+     
+</mapper>
+
+
+
+
+
+   
