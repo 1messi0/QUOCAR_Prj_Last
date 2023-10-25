@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="Cmodel">  
+	<!-- 차량 목록 -->
+	<select id="CmodelList"
+	        resultType="com.quocar.chat.vo.CmodelVo">
+	      SELECT   MODEL_ID
+                  ,MODEL_NAME
+                  ,MODEL_SEQ
+         FROM      CAR_MODEL
+		 ORDER BY  MODEL_SEQ ASC
+	
+	</select>
+
+	<!-- 차량 목록이름 -->
+	<select id="CmodelName"
+	        resultType="java.lang.String">
+        
+        SELECT     MODEL_NAME
+         FROM      CAR_MODEL
+         WHERE     MODEL_ID  =  #{model_id}
+	
+	</select> 
+   <!-- 차량 목록이름 조회	-->
+	<select id="GetCmodel"
+		        resultType="com.quocar.chat.vo.CmodelVo">
+        SELECT     MODEL_ID
+                  ,MODEL_NAME
+                  ,MODEL_SEQ
+         FROM      CAR_MODEL
+         WHERE     MODEL_ID  =  #{model_id}
+	</select>
+</mapper>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="Cmenu">  
+	<!-- 고객센터 목록 -->
+	<select id="CmenuList"
+	        resultType="com.quocar.csc.vo.CmenuVo">
+	      SELECT   CSC_ID
+                  ,CSC_NAME
+                  ,CSC_SEQ
+         FROM      CSC_MENUS
+		 ORDER BY  CSC_SEQ ASC
+	
+	</select>
+	
+	<!-- 고객센터 조회 -->
+	<select id="GetCmenu"
+		        resultType="com.quocar.csc.vo.CmenuVo">
+        SELECT     CSC_ID
+                  ,CSC_NAME
+                  ,CSC_SEQ
+         FROM      CSC_MENUS
+         WHERE     CSC_ID  =  #{csc_id}
+
+	</select>
+	
+	<!-- 고객센터 목록이름 -->
+	<select id="CmenuName"
+	        resultType="java.lang.String">
+        
+        SELECT     CSC_NAME
+         FROM      CSC_MENUS
+         WHERE     CSC_ID  =  #{csc_id}
+	
+	</select>
+
+</mapper>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   

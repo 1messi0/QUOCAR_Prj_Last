@@ -1,0 +1,47 @@
+@charset "UTF-8";
+
+.reply-table {
+	border-top: 0;
+	width: 985px;
+}
+
+
+.modify-button {
+	padding: 5px 15px;
+    background-color: #fff;
+    color: #334F4F;
+    border: 2px solid #ccc;
+    cursor: pointer;
+    margin-right: 5px;
+    border-radius: 5px;
+    margin-bottom: 5px;
+    margin-top: 5px;
+}
+
+#btnReplyUpdate, #btnReplyDelete, #btnReplyClose{
+	padding: 10px 20px;
+    background-color: #334F4F;
+    color: #fff;
+    border: 2px solid #ccc;
+    cursor: pointer;
+    margin-right: 10px;
+    border-radius: 5px;
+}
+
+.modifybutton {
+	float: right;
+}
+
+.username {
+	font-weight: bold;
+	font-size: 26px;
+	color:#334F4F;
+}
+.regdate {
+	color: #888;
+	
+}
+
+.replytext {
+	font-size: 20px;
+}
