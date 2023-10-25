@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="Mechanic">  
+	<!-- 정비 목록 -->
+	<select id="MechanicList"
+	        resultType="com.quocar.chat.vo.MechanicVo">
+	      SELECT   MECHANIC_ID
+                  ,MECHANIC_NAME
+                  ,MECHANIC_SEQ
+         FROM      MECHANIC
+		 ORDER BY  MECHANIC_SEQ ASC
+	
+	</select>
+	
+	<!-- 정비 목록이름 -->
+	<select id="MechanicName"
+	        resultType="java.lang.String">
+        
+        SELECT     MECHANIC_NAME
+         FROM      MECHANIC
+         WHERE     MECHANIC_ID  =  #{mechanic_id}
+	</select>
+
+	<!-- 정비 목록이름 조회 --> 
+	<select id="GetMechanic"
+		        resultType="com.quocar.chat.vo.MechanicVo">
+        SELECT     MECHANIC_ID
+                  ,MECHANIC_NAME
+                  ,MECHANIC_SEQ
+         FROM      MECHANIC
+         WHERE     MECHANIC_ID  =  #{mechanic_id}
+
+	</select>
+	
+
+
+</mapper>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   
